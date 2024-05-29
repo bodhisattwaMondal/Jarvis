@@ -267,7 +267,7 @@ def findCityName(query):
     '''This function extracts city name from user's command.
     If not found returns None'''
     # List of words to remove from the command
-    words_to_remove = [ASSISTANT_NAME, "weather", "in", "what", "is", "today", "today's", "for", "the", "forecast", "temperature", "climate", "like", "my", "location", "place", "please", "condition", "report"]
+    words_to_remove = [ASSISTANT_NAME, "weather", "in", "what", "is", "today", "today's", "for", "the", "forecast", "temperature", "climate", "like", "my", "location", "place", "please", "condition", "report", "of"]
 
     city_name = remove_words(query, words_to_remove) # will fetch the city name 
 
@@ -326,22 +326,45 @@ def get_trending_movies():
 
 # Sending Email 
 def send_email(receiver_address, subject, message):
-    '''Send email to the reciever address'''
+    '''Send email to the receiver address'''
     try:
+        # Create an EmailMessage object
         email = EmailMessage()
+        
+        # Set the recipient's email address
         email['To'] = receiver_address
+        
+        # Set the subject of the email
         email["Subject"] = subject
+        
+        # Set the sender's email address
         email['From'] = EMAIL
+        
+        # Set the content of the email
         email.set_content(message)
+        
+        # Establish a connection to the Gmail SMTP server
         s = smtplib.SMTP("smtp.gmail.com", 587) # Port : 587
+        
+        # Start TLS (Transport Layer Security) for security
         s.starttls()
+        
+        # Login to the email account using the provided EMAIL and PASSWORD
         s.login(EMAIL, PASSWORD)
+        
+        # Send the email message
         s.send_message(email)
+        
+        # Close the connection to the SMTP server
         s.close()
+        
+        # If everything goes well, return True indicating success
         return True
     except Exception as e:
+        # If there is any exception, print the error message and return False indicating failure
         print(e)
         return False 
+
 
 # Drawing using turtle 
 def draw(person):

@@ -239,7 +239,7 @@ def allCommands(message=1):
         # Advice
         elif "advice" in query:
             from engine.features import get_random_advice
-            speak("Here's and advice for you, sir")
+            speak("Here's an advice for you, sir")
             advice = get_random_advice()
             speak(advice)
         
@@ -278,7 +278,7 @@ def allCommands(message=1):
             draw("bts")
         
         # Screenshot
-        elif "take screenshot" in query or "take a screenshot" in query or "capture the screen" in query:
+        elif "screenshot" in query or "take screenshot" in query or "take a screenshot" in query or "capture the screen" in query:
             speak("By what name do you want to save the screenshot?")
             name = takeCommand()
             name = f'{name}.png'
