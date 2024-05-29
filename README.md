@@ -135,7 +135,7 @@ Sequence Dig.
 - You need to first ```fork``` this repository and ```clone``` the repository to your local system 
 
     ```
-    $ git clone https://github.com/<your-github-username>/J.A.R.V.I.S.git
+    $ git clone https://github.com/bodhisattwaMondal/Jarvis.git
     ```
 - Create a ```virtual enviroment```, for convinence i'm naming the env as ```envjarvis```
     ```
@@ -184,3 +184,11 @@ Sequence Dig.
             - It generates trainer.yml under trainer folder 
         
     ```
+## Future Enhancements
+- Enhanced AI Capabilities: Implement machine learning models for better understanding and response.
+
+- Cross-Platform Support: Extend compatibility to macOS and Linux.
+
+- Third-Party Integrations: Integrate with more third-party services like calendars, task managers, and smart home devices.
+
+- Multilinguial Support: Support for multiple native languages like Hindi, Bengali, Tamil, etc
