@@ -1,7 +1,7 @@
 
 ## J.A.R.V.I.S
 **J.A.R.V.I.S** - JUST A RATHER VERY INTELLIGENT SYSTEM inspired by Tony Stark's IRONMAN from the MCU
-## Description
+## Description 🤖
 
 In this project I've created a virtual desktop voice assistant 'JARVIS', which has been creatd by using **python** as the scripting language. **HTML**, **CSS**, **jS** as the front-end part. And **SqLite3** as the database. JARVIS adapts to user needs, providing a seamless and efficient interaction experience.
 
@@ -12,6 +12,7 @@ Currently I've implemented:
 3. Provided 25+ features to JARVIS.
 ```
 
+- Demo video for ***JARVIS*** is available [here](https://drive.google.com/drive/folders/1-42zCfCObzy2b49qia1oI4E9AU92YWQC?usp=drive_link)
 
 ## Features
 
@@ -36,7 +37,7 @@ Currently I've implemented:
     19.	Current day & date
     20.	Current time
 
-## Visuals
+## Visuals 📸
 
 ## UI
 Main Hood
@@ -184,7 +185,7 @@ Sequence Dig.
             - It generates trainer.yml under trainer folder 
         
     ```
-## Future Enhancements
+## Future Enhancements ✨
 - Enhanced AI Capabilities: Implement machine learning models for better understanding and response.
 
 - Cross-Platform Support: Extend compatibility to macOS and Linux.

@@ -267,7 +267,7 @@ def findCityName(query):
     '''This function extracts city name from user's command.
     If not found returns None'''
     # List of words to remove from the command
-    words_to_remove = [ASSISTANT_NAME, "weather", "in", "what", "is", "today", "today's", "for", "the", "forecast", "temperature", "climate", "like", "my", "location", "place", "please", "condition"]
+    words_to_remove = [ASSISTANT_NAME, "weather", "in", "what", "is", "today", "today's", "for", "the", "forecast", "temperature", "climate", "like", "my", "location", "place", "please", "condition", "report"]
 
     city_name = remove_words(query, words_to_remove) # will fetch the city name 
 
