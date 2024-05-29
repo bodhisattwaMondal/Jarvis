@@ -5,12 +5,12 @@ def extract_yt_term(command):
     '''Using re extracts search terms from user's command & return it 
     if not found returns None'''
     
-    # Define an regular expression pattern to capture the song name 
-    pattern = r'play\s+(.*?)\s+on\s+youtube'
+    # Define a regular expression pattern to capture the search term
+    pattern = r'(play|search|search for|find|look for|watch)\s+(.*?)\s+on\s+youtube'
     # Use re.search to find the match in the command parameter
     match = re.search(pattern, command, re.IGNORECASE)
-    # If a match is found, return the extracted song name; otherwise, return None 
-    return match.group(1) if match else None
+    # If a match is found, return the extracted search term; otherwise, return None 
+    return match.group(2) if match else None
 
 
 def remove_words(input_string, words_to_remove):

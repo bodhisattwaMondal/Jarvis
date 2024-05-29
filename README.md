@@ -40,21 +40,21 @@ Currently I've implemented:
 ## Visuals 📸
 
 ## UI
-Main Hood
+**Main Hood**
 ![main hood](https://github.com/bodhisattwaMondal/Jarvis/assets/123143501/4b15972e-eafb-4748-ab7c-d1dc75261176)
 
-Listening & Output Display
+**Listening & Output Display**
 ![siri wave](https://github.com/bodhisattwaMondal/Jarvis/assets/123143501/afdc13e9-1d0e-45f8-826c-f5b1cedb1121)
 
-Chat History
+**Chat History**
 ![chat history](https://github.com/bodhisattwaMondal/Jarvis/assets/123143501/b68eaf8e-74f5-4571-a152-4b0e996ad6c6)
 
 ## User Authentication
 
-Face Recognition
+**Face Recognition**
 ![race recog](https://github.com/bodhisattwaMondal/Jarvis/assets/123143501/4ac12015-c86b-4046-b453-b187387a0be2)
 
-Granting Access to Application 
+**Granting Access to Application**
 ![user verification](https://github.com/bodhisattwaMondal/Jarvis/assets/123143501/cc37d2f8-ef63-4207-9daf-53363f92771e)
 
 ## Architecture
@@ -64,20 +64,20 @@ Granting Access to Application
 ![tech stack](https://github.com/bodhisattwaMondal/Jarvis/assets/123143501/9e07c9aa-3ea8-4599-b564-3caf65b8a3b9)
 
 ## Diagrams
-Flowchart
+**Flowchart**
 ![Flowchart](https://github.com/bodhisattwaMondal/Jarvis/assets/123143501/ee1216eb-d205-45cb-8ae9-739e4c4ef153)
 
-DFD
+**DFD**
 ![DFD LEVEL 0](https://github.com/bodhisattwaMondal/Jarvis/assets/123143501/18ba369a-20de-4fe9-a04a-c32a4441869f)
 
 ![DFD LEVEL 1](https://github.com/bodhisattwaMondal/Jarvis/assets/123143501/711d6675-a71f-467f-a7f9-c508b2809d0b)
 
 ![DFD LEVEL 2](https://github.com/bodhisattwaMondal/Jarvis/assets/123143501/dbf92c11-b6e1-4e6a-b248-7af1653e8e56)
 
-Use Case
+**Use Case**
 ![use case diagram](https://github.com/bodhisattwaMondal/Jarvis/assets/123143501/6e8de236-aa03-46b8-be41-714d9444e1f0)
 
-Sequence Dig.
+**Sequence Dig.**
 ![sequence diagram for task execution](https://github.com/bodhisattwaMondal/Jarvis/assets/123143501/ac4865ba-1aea-465c-acff-276d5ed45a73)
 ## Project Directory Structure 🌲
 
@@ -172,13 +172,14 @@ Sequence Dig.
 
     ```
 - Training model for face recognition
+
     ![face recognition](https://github.com/bodhisattwaMondal/Jarvis/assets/123143501/ff8ee175-7a2f-4a64-a1e2-aa31eb1a15f0)
     ```
     Go to user_authentication folder:
         Taking Facial Samples-
             - Run sample generator.py 
             - Assign unique ID for each person starting from 1
-            - Look at the webcam for face samples 
+            - Look at the webcam for taking face samples 
         
         Training Model-
             - Run model trainer.py
