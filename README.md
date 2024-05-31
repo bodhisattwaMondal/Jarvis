@@ -12,8 +12,21 @@ Currently I've implemented:
 3. Provided 25+ features to JARVIS.
 ```
 
-- Demo video for ***JARVIS*** is available [here](https://drive.google.com/drive/folders/1-42zCfCObzy2b49qia1oI4E9AU92YWQC?usp=drive_link)
+- Demo video for **JARVIS** is available [here](https://drive.google.com/drive/folders/1-42zCfCObzy2b49qia1oI4E9AU92YWQC?usp=drive_link)
 
+## Tools & Environment Used
+
+### Hardware Used
+- CPU: AMD Ryzen 7 3700X
+- RAM: DDR4 8GB * 2
+- PCB: Gigabyte X570 Aorus Elite
+- GPU: NVIDIA GeForce RTX 2060 Super (vRAM-8GB)
+- Full HD webcam with inbuild mic
+
+### Software Used
+- OS: Windows 11 Pro(64-bit architecture)
+- IDE: Visual Studio Code
+- Python 3.12.1
 ## Features
 
     1.	Face Recognition for authentication
@@ -40,21 +53,21 @@ Currently I've implemented:
 ## Visuals 📸
 
 ## UI
-**Main Hood**
+Main Hood
 ![main hood](https://github.com/bodhisattwaMondal/Jarvis/assets/123143501/4b15972e-eafb-4748-ab7c-d1dc75261176)
 
-**Listening & Output Display**
+Listening & Output Display
 ![siri wave](https://github.com/bodhisattwaMondal/Jarvis/assets/123143501/afdc13e9-1d0e-45f8-826c-f5b1cedb1121)
 
-**Chat History**
+Chat History
 ![chat history](https://github.com/bodhisattwaMondal/Jarvis/assets/123143501/b68eaf8e-74f5-4571-a152-4b0e996ad6c6)
 
 ## User Authentication
 
-**Face Recognition**
+Face Recognition
 ![race recog](https://github.com/bodhisattwaMondal/Jarvis/assets/123143501/4ac12015-c86b-4046-b453-b187387a0be2)
 
-**Granting Access to Application**
+Granting Access to Application 
 ![user verification](https://github.com/bodhisattwaMondal/Jarvis/assets/123143501/cc37d2f8-ef63-4207-9daf-53363f92771e)
 
 ## Architecture
@@ -64,26 +77,27 @@ Currently I've implemented:
 ![tech stack](https://github.com/bodhisattwaMondal/Jarvis/assets/123143501/9e07c9aa-3ea8-4599-b564-3caf65b8a3b9)
 
 ## Diagrams
-**Flowchart**
+Flowchart
 ![Flowchart](https://github.com/bodhisattwaMondal/Jarvis/assets/123143501/ee1216eb-d205-45cb-8ae9-739e4c4ef153)
 
-**DFD**
+DFD
 ![DFD LEVEL 0](https://github.com/bodhisattwaMondal/Jarvis/assets/123143501/18ba369a-20de-4fe9-a04a-c32a4441869f)
 
 ![DFD LEVEL 1](https://github.com/bodhisattwaMondal/Jarvis/assets/123143501/711d6675-a71f-467f-a7f9-c508b2809d0b)
 
 ![DFD LEVEL 2](https://github.com/bodhisattwaMondal/Jarvis/assets/123143501/dbf92c11-b6e1-4e6a-b248-7af1653e8e56)
 
-**Use Case**
+Use Case
 ![use case diagram](https://github.com/bodhisattwaMondal/Jarvis/assets/123143501/6e8de236-aa03-46b8-be41-714d9444e1f0)
 
-**Sequence Dig.**
+Sequence Dig.
 ![sequence diagram for task execution](https://github.com/bodhisattwaMondal/Jarvis/assets/123143501/ac4865ba-1aea-465c-acff-276d5ed45a73)
 ## Project Directory Structure 🌲
 
 ```
 ├── .env
 ├── .gitignore
+├── contacts.csv
 ├── engine
 │   ├── command.py
 │   ├── config.py
@@ -133,23 +147,43 @@ Currently I've implemented:
     3. The Movies Database(TMDB) : https://www.themoviedb.org/
 ## Installation 💻
 
-- You need to first ```fork``` this repository and ```clone``` the repository to your local system 
+- ### Downloads & Install
+    Download & install Python: https://www.python.org/downloads/ 
 
-    ```
+    Download & install VS Code: https://code.visualstudio.com/download
+
+    Download & install Git bash: https://git-scm.com/downloads
+    
+    ***NOTE***
+
+    If error appears like : 'git' or 'python' is recognized as an internal/external command, operable program or batch file.
+
+    Add git or python into your system path, environment variable
+
+- ### Clone the project
+    First ```fork``` this repository and ```clone``` the repository to your local system 
+
+    ```bash
     $ git clone https://github.com/bodhisattwaMondal/Jarvis.git
     ```
-- Create a ```virtual enviroment```, for convinence i'm naming the env as ```envjarvis```
-    ```
+    Now, Open VS Code in the same directory
+
+- ### Create virtual environment 
+    I'm naming the env as ```envjarvis```
+
+    ```bash
     $ python –m venv envjarvis
     ```
 
-- Make sure to install all the required python modules mentioned above or you can simply install them by 
+- ### Install dependencies
+    Make sure to install all the required python modules mentioned above or you can simply install them by 
 
-    ```
+    ```bash
     $ pip install -r requirements.txt
     ```
 
-- Create an ```enviroment variable``` .env file in the root directory
+- ### Create enviroment variable
+    Create an ```enviroment variable``` .env file in the root directory
 
     ```
     ASSISTANT_NAME = "Jarvis"
@@ -161,7 +195,7 @@ Currently I've implemented:
     ```
     NOTE: Replace None with your credentials
 
-- Inegrate Hugging Face cookies for login
+- ### Inegrate Hugging Face cookies for login
     ```
     1. Create an account on https://huggingface.co/
     2. Install Cookie-Editor chrome extension in your edge browser
@@ -171,26 +205,69 @@ Currently I've implemented:
     6. Paste login cookies into cookies.json
 
     ```
-- Training model for face recognition
-
+- ### Train model for face recognition
     ![face recognition](https://github.com/bodhisattwaMondal/Jarvis/assets/123143501/ff8ee175-7a2f-4a64-a1e2-aa31eb1a15f0)
     ```
     Go to user_authentication folder:
+        Create folder: samples & trainer
         Taking Facial Samples-
             - Run sample generator.py 
             - Assign unique ID for each person starting from 1
-            - Look at the webcam for taking face samples 
+            - Look at the webcam for face samples 
         
         Training Model-
             - Run model trainer.py
             - It generates trainer.yml under trainer folder 
         
     ```
+
+
+- ### Create sqlite3 databse (db.py)
+    **Import Google Contacts**
+
+    ```
+    Go to https://contacts.google.com/
+    Export your contacts in Google CSV format
+    Paste the file in root directory
+    ```
+
+    **Create Database**
+
+    ```bash
+    import sqlite2
+    import csv
+
+    # Connection
+    con - sqlite3.connect("jarvis.db")
+
+    # Cursor
+    cursor = con.cursor()
+    ```
+
+    **Create Tables**
+
+    ```bash
+    # system commands Table
+    query = "CREATE TABLE IF NOT EXISTS sys_command(id integer primary  key, name VARCHAR(100), path VARCHAR(1000))"
+    cursor.execute(query)
+
+    # web commands Table
+    query = "CREATE TABLE IF NOT EXISTS web_command(id integer primary key, name VARCHAR(100), url VARCHAR(1000))"
+    cursor.execute(query)
+
+    # contacts Table
+    cursor.execute('''CREATE TABLE IF NOT EXISTS contacts (id integer primary key, name VARCHAR(200), mobile_no VARCHAR(255), email VARCHAR(255) NULL)''')
+    ```
+
 ## Future Enhancements ✨
-- Enhanced AI Capabilities: Implement machine learning models for better understanding and response.
+- **Enhanced AI Capabilities**: Implement machine learning models for better understanding and response.
 
-- Cross-Platform Support: Extend compatibility to macOS and Linux.
+- **Cross-Platform Support**: Extend compatibility to macOS and Linux.
 
-- Third-Party Integrations: Integrate with more third-party services like calendars, task managers, and smart home devices.
+- **Third-Party Integrations**: Integrate with more third-party services like calendars, task managers, and smart home devices.
 
-- Multilinguial Support: Support for multiple native languages like Hindi, Bengali, Tamil, etc
+- **Multilinguial Support**: Support for multiple native languages like Hindi, Bengali, Tamil, etc
+
+- **Android Automation**: Automating tasks on android devices
+
+- **User Customization UI**: User can update his own phonebook, can autorize himself by scannig his face, can set his own commands. Everything right from the JARVIS UI.
