@@ -248,17 +248,71 @@ Sequence Dig.
 
     ```bash
     # system commands Table
-    query = "CREATE TABLE IF NOT EXISTS sys_command(id integer primary  key, name VARCHAR(100), path VARCHAR(1000))"
-    cursor.execute(query)
+    cursor.execute('''CREATE TABLE IF NOT EXISTS sys_command(id integer primary  key, name VARCHAR(100), path VARCHAR(1000)''')
+
 
     # web commands Table
-    query = "CREATE TABLE IF NOT EXISTS web_command(id integer primary key, name VARCHAR(100), url VARCHAR(1000))"
-    cursor.execute(query)
+    cursor.execute(''''CREATE TABLE IF NOT EXISTS web_command(id integer primary key, name VARCHAR(100), url VARCHAR(1000)''')
+ 
 
     # contacts Table
     cursor.execute('''CREATE TABLE IF NOT EXISTS contacts (id integer primary key, name VARCHAR(200), mobile_no VARCHAR(255), email VARCHAR(255) NULL)''')
     ```
 
+    **Insert into Tables**
+    
+    -> System Commands
+    
+    ```bash
+    cursor.execute("INSERT INTO sys_command VALUES (null,'<software name here>', '<software file location here>\\<software name>.exe')")
+    
+    example: 
+    cursor.execute("INSERT INTO sys_command VALUES (null,'calculator', 'C:\\Windows\\System32\\calc.exe')")
+    cursor.execute("INSERT INTO sys_command VALUES (null,'msPaint', 'c:\\Windows\\System32\\mspaint.exe')")
+
+    con.commit()  # saving the data on db upto this instance
+
+    ```
+
+    -> Web Commands
+    
+    ```bash
+    cursor.execute("INSERT INTO web_command VALUES (null,'facebook', 'https://www.facebook.com/')")
+    cursor.execute("INSERT INTO web_command VALUES (null,'instagram', 'https://www.instagram.com/')")
+    cursor.execute("INSERT INTO web_command VALUES (null,'flipkart', 'https://www.flipkart.com/')")
+    cursor.execute("INSERT INTO web_command VALUES (null,'amazon', 'https://www.amazon.in/')")
+    cursor.execute("INSERT INTO web_command VALUES (null,'netflix', 'https://www.netflix.com/')")
+    cursor.execute("INSERT INTO web_command VALUES (null,'hotstar', 'https://www.hotstar.com/in')")
+    cursor.execute("INSERT INTO web_command VALUES (null,'amazon prime', 'https://www.primevideo.com/')")
+    cursor.execute("INSERT INTO web_command VALUES (null,'mail', 'https://mail.google.com/mail/')")
+    cursor.execute("INSERT INTO web_command VALUES (null,'maps', 'https://www.google.co.in/maps/')")
+    cursor.execute("INSERT INTO web_command VALUES (null,'google news', 'https://news.google.com/')")
+    cursor.execute("INSERT INTO web_command VALUES (null,'google photos', 'https://photos.google.com/')")
+    cursor.execute("INSERT INTO web_command VALUES (null,'google calendar', 'https://calendar.google.com/calendar/')")
+    cursor.execute("INSERT INTO web_command VALUES (null,'google documents', 'https://docs.google.com/document/')")
+    cursor.execute("INSERT INTO web_command VALUES (null,'google spreadsheets', 'https://docs.google.com/spreadsheets/')")
+
+    con.commit()  # saving the data on db upto this instance
+    ```
+
+    -> Contacts
+
+    ```bash
+    # Specify the column indices you want to import (0-based index)
+    # Example: Importing the 1st and 3rd columns
+    desired_columns_indices = [0, 32, 30]
+    # Read data from CSV and insert into SQLite table for the desired columns
+    with open('contacts.csv', 'r', encoding='utf-8') as csvfile:
+        csvreader = csv.reader(csvfile)
+        for row in csvreader:
+            selected_data = [row[i] for i in desired_columns_indices]
+            cursor.execute(''' INSERT INTO contacts (id, 'name', 'mobile_no','email') VALUES (null, ?, ?, ?);''', tuple(selected_data))
+
+    #Commit changes and close connection
+    con.commit()
+    con.close()
+
+    ```
 ## Future Enhancements ✨
 - **Enhanced AI Capabilities**: Implement machine learning models for better understanding and response.
 

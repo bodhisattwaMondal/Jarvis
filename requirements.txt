@@ -89,6 +89,7 @@ wikipedia==1.4.0
 zope.event==5.0
 zope.interface==6.3
 
+pvporcupine==1.9.5
 python-decouple
 hugchat
 googletrans==4.0.0-rc1
